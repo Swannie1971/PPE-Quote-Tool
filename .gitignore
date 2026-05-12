@@ -1,0 +1,15 @@
+# Database credentials — never commit the real config
+app/api/config.php
+
+# Uploaded assets (logo etc.) — server-side only
+app/assets/logo.*
+
+# Claude Code local settings
+.claude/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo

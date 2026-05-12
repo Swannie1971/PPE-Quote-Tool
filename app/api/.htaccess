@@ -1,0 +1,10 @@
+# Deny direct browser access to PHP API files — only allow same-origin XHR
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Block direct navigation to config/db/base helpers
+<FilesMatch "^(config|db|base)\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
